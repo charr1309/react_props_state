@@ -1,17 +1,30 @@
 import * as React from "react";
 
-const Box = (props) => {
-  return (
+class Box extends Component {
+  constructor(props) {
+    super(props);
+  }
+}
+  render (
+    const{key, id, color} = this.props.values
+    return (
     <div
       style={{
+        key: {id},
+        id: {id},
         width: "180px",
         height: "180px",
-        backgroundColor: props.color,
+        backgroundColor: color,
         border: "1px solid black",
         display: "inline-block",
       }}
+      onClick={(event) => this.props.methods.handleBoxClick}
     >
-      <span>{/* Add rgb value from props */}</span>
+
+    )
+    
+      
+      <span>{color}</span>
     </div>
   );
 };
